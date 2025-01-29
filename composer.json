@@ -1,0 +1,18 @@
+{
+    "name": "wpp-generator/vajofo-olena-food-ordering",
+    "description": "Olena Food Ordering - a simple yet powerful WordPress plugin for restaurants and food trucks. Easily manage your menu, handle orders with custom add-ons, and organize pickups. Mobile-friendly interface ensures smooth ordering experience for your customers",
+    "type": "project",
+    "license": "GNU GENERAL PUBLIC LICENSE",
+    "autoload": {
+        "psr-4": {
+            "VAJOFOWPPGNext\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maksym Marko",
+            "email": "markomaksym@gmail.com"
+        }
+    ],
+    "require": {}
+}

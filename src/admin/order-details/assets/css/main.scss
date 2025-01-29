@@ -1,0 +1,197 @@
+:root {
+
+  /**
+  * Layout colors
+  */
+  /* Body */
+  --olena-food-ordering-color-base: var(--ofo-color-base, #FFFFFF);
+  --olena-food-ordering-color-contrast: var(--ofo-color-contrast, #1A2024);
+  --olena-food-ordering-color-accent-1-50: var(--ofo-color-accent-1-50, rgba(46, 125, 50, 0.1));
+  --olena-food-ordering-color-accent-1: var(--ofo-color-accent-1, #2E7D32);
+  --olena-food-ordering-color-accent-2: var(--ofo-color-accent-2, #e53e3e);
+  --olena-food-ordering-color-accent-3: var(--ofo-color-accent-3, #FFB800);
+
+  /* Gray colors */
+  --olena-food-ordering-color-gray-50: var(--ofo-color-gray-50, #F5F7F9);
+  --olena-food-ordering-color-gray-100: var(--ofo-color-gray-100, #E0E0E0);
+  --olena-food-ordering-color-gray-150: var(--ofo-color-gray-150, rgba(0, 0, 0, 0.05));
+  --olena-food-ordering-color-gray-200: var(--ofo-color-gray-200, #6b7280);
+  --olena-food-ordering-color-gray-250: var(--ofo-color-gray-250, #4A5056);
+
+  /*
+  * Statuses colors
+  */
+  /* Success */
+  --olena-food-ordering-color-success-100: var(--ofo-color-success-100, #F0FDF4);
+  --olena-food-ordering-color-success-200: var(--ofo-color-success-200, #22C55E);
+
+  /* Warning */
+  --olena-food-ordering-color-warning-200: var(--ofo-color-warning-200, #FFA000);
+
+  /* Error */
+  --olena-food-ordering-color-error-100: var(--ofo-color-error-100, #FEE2E2);
+  --olena-food-ordering-color-error-200: var(--ofo-color-error-200, #EF4444);
+}
+
+// Receipt
+.ofo-receipt-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--olena-food-ordering-color-base);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px var(--olena-food-ordering-color-gray-150);
+  border: 1px solid var(--olena-food-ordering-color-accent-1);
+
+  .print-btn {
+    background: var(--olena-food-ordering-color-base);
+    color: var(--olena-food-ordering-color-accent-1);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+
+  .print-btn:hover {
+    background: #f0f0f0;
+  }
+
+  .receipt-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--olena-food-ordering-color-gray-50);
+  }
+
+  .receipt-header .receipt-title {
+    color: var(--olena-food-ordering-color-accent-1);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .receipt-header .order-number {
+    color: var(--olena-food-ordering-color-gray-250);
+    font-size: 0.9rem;
+  }
+
+  .receipt-section {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    color: var(--olena-food-ordering-color-contrast);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--olena-food-ordering-color-gray-50);
+    font-weight: bold;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .info-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .info-label {
+    color: var(--olena-food-ordering-color-gray-250);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .info-value {
+    color: var(--olena-food-ordering-color-contrast);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .order-items {
+    margin-bottom: 1.5rem;
+  }
+
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--olena-food-ordering-color-gray-50);
+  }
+
+  .item-details {
+    flex: 1;
+  }
+
+  .item-name {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+  }
+
+  .item-addons {
+    color: var(--olena-food-ordering-color-gray-250);
+    font-size: 0.9rem;
+    padding-left: 1rem;
+  }
+
+  .item-price {
+    font-weight: 500;
+    color: var(--olena-food-ordering-color-accent-1);
+    font-size: 1rem;
+  }
+
+  .order-summary {
+    background: var(--olena-food-ordering-color-gray-50);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    color: var(--olena-food-ordering-color-gray-250);
+  }
+
+  .total-amount {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--olena-food-ordering-color-gray-100);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--olena-food-ordering-color-contrast);
+  }
+}
+@media print {
+  body {
+      background: var(--olena-food-ordering-color-base);
+      padding: 0;
+  }
+
+  .header {
+      display: none;
+  }
+
+  .ofo-receipt-container {
+      box-shadow: none;
+      padding: 1rem;
+  }
+
+  .print-btn {
+      display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+      grid-template-columns: 1fr;
+  }
+}

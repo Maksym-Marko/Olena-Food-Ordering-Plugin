@@ -1,0 +1,49 @@
+:root {
+
+  /**
+  * Layout colors
+  */
+  /* Body */
+  --olena-food-ordering-color-base: var(--ofo-color-base, #FFFFFF);
+  --olena-food-ordering-color-contrast: var(--ofo-color-contrast, #1A2024);
+  --olena-food-ordering-color-accent-1-50: var(--ofo-color-accent-1-50, rgba(46, 125, 50, 0.1));
+  --olena-food-ordering-color-accent-1: var(--ofo-color-accent-1, #2E7D32);
+  --olena-food-ordering-color-accent-2: var(--ofo-color-accent-2, #e53e3e);
+  --olena-food-ordering-color-accent-3: var(--ofo-color-accent-3, #FFB800);
+
+  /* Gray colors */
+  --olena-food-ordering-color-gray-50: var(--ofo-color-gray-50, #F5F7F9);
+  --olena-food-ordering-color-gray-100: var(--ofo-color-gray-100, #E0E0E0);
+  --olena-food-ordering-color-gray-150: var(--ofo-color-gray-150, rgba(0, 0, 0, 0.05));
+  --olena-food-ordering-color-gray-200: var(--ofo-color-gray-200, #6b7280);
+  --olena-food-ordering-color-gray-250: var(--ofo-color-gray-250, #4A5056);
+  --olena-food-ordering-color-gray-300: var(--ofo-color-gray-300, rgba(17, 24, 39, 0.7));
+
+  /*
+  * Statuses colors
+  */
+  /* Success */
+  --olena-food-ordering-color-success-100: var(--ofo-color-success-100, #F0FDF4);
+  --olena-food-ordering-color-success-200: var(--ofo-color-success-200, #22C55E);
+
+  /* Warning */
+  --olena-food-ordering-color-warning-200: var(--ofo-color-warning-200, #FFA000);
+
+  /* Error */
+  --olena-food-ordering-color-error-100: var(--ofo-color-error-100, #FEE2E2);
+  --olena-food-ordering-color-error-200: var(--ofo-color-error-200, #EF4444);
+}
+
+.ofo-single-item-button {
+  background-color: var(--olena-food-ordering-color-accent-1);
+  color: var(--olena-food-ordering-color-base);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 400;
+}
+

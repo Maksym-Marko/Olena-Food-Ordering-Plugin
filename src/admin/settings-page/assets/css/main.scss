@@ -1,0 +1,500 @@
+:root {
+
+  /**
+  * Layout colors
+  */
+  /* Body */
+  --olena-food-ordering-color-base: var(--ofo-color-base, #FFFFFF);
+  --olena-food-ordering-color-contrast: var(--ofo-color-contrast, #1A2024);
+  --olena-food-ordering-color-accent-1-50: var(--ofo-color-accent-1-50, rgba(46, 125, 50, 0.1));
+  --olena-food-ordering-color-accent-1: var(--ofo-color-accent-1, #2E7D32);
+  --olena-food-ordering-color-accent-2: var(--ofo-color-accent-2, #e53e3e);
+  --olena-food-ordering-color-accent-3: var(--ofo-color-accent-3, #FFB800);
+
+  /* Gray colors */
+  --olena-food-ordering-color-gray-50: var(--ofo-color-gray-50, #F5F7F9);
+  --olena-food-ordering-color-gray-100: var(--ofo-color-gray-100, #E0E0E0);
+  --olena-food-ordering-color-gray-150: var(--ofo-color-gray-150, rgba(0, 0, 0, 0.05));
+  --olena-food-ordering-color-gray-200: var(--ofo-color-gray-200, #6b7280);
+  --olena-food-ordering-color-gray-250: var(--ofo-color-gray-250, #4A5056);
+
+  /*
+  * Statuses colors
+  */
+  /* Success */
+  --olena-food-ordering-color-success-100: var(--ofo-color-success-100, #F0FDF4);
+  --olena-food-ordering-color-success-200: var(--ofo-color-success-200, #22C55E);
+
+  /* Warning */
+  --olena-food-ordering-color-warning-200: var(--ofo-color-warning-200, #FFA000);
+
+  /* Error */
+  --olena-food-ordering-color-error-100: var(--ofo-color-error-100, #FEE2E2);
+  --olena-food-ordering-color-error-200: var(--ofo-color-error-200, #EF4444);
+}
+
+.olena-food-ordering-wrapper {
+
+  .shortcode-box-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .additional-info-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--olena-food-ordering-color-gray-250);
+    margin-bottom: 1rem;
+  }
+
+  .shortcode-box {
+    background-color: var(--olena-food-ordering-color-gray-50);
+    border: 1px solid var(--olena-food-ordering-color-gray-100);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #1A2024;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .copy-button {
+      background-color: transparent;
+      border: 1px solid var(--olena-food-ordering-color-accent-1);
+      color: var(--olena-food-ordering-color-accent-1);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .settings-section-divider {
+    margin: 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--olena-food-ordering-color-gray-100);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--olena-food-ordering-color-gray-250);
+  }
+
+  // import success
+  .ofo_success {
+    background-color: var(--olena-food-ordering-color-success-100);
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: var(--olena-food-ordering-color-accent-1);
+    border: 1px solid var(--olena-food-ordering-color-accent-1);
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '✓';
+      display: inline-block;
+      margin-right: 12px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+
+  // import progress
+  & .ofo_progress {
+    background-color: var(--olena-food-ordering-color-gray-100);
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: var(--olena-food-ordering-color-gray-200);
+    border: 1px solid var(--olena-food-ordering-color-gray-100);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--olena-food-ordering-color-gray-200);
+      border-radius: 50%;
+      border-top-color: transparent;
+      margin-right: 12px;
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  & .error-message {
+    background-color: var(--olena-food-ordering-color-error-100);
+    border: 1px solid var(--olena-food-ordering-color-error-200);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  & .error-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--olena-food-ordering-color-error-200);
+  }
+
+  & .error-text {
+    color: var(--olena-food-ordering-color-error-200);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  & p {
+    font-size: 16px;
+  }
+
+  & input[type=text],
+  & input[type=number],
+  & input[type=url],
+  & textarea,
+  & select {
+    width: 100%;
+    padding: 0.45rem 0.8rem;
+    border: 2px solid var(--olena-food-ordering-color-gray-100);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: transparent;
+    max-width: 100%;
+  }
+
+  /* Container */
+  & .container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+  }
+}
+
+/* BaseCard */
+.fo-base-card {
+  background-color: var(--olena-food-ordering-color-base);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+/* Buttons */
+.fo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid;
+  line-height: 1;
+
+  &_primary {
+    background-color: var(--olena-food-ordering-color-accent-1);
+    border-color: var(--olena-food-ordering-color-accent-1);
+    color: var(--olena-food-ordering-color-base);
+
+    &:hover {
+      background-color: var(--olena-food-ordering-color-accent-1);
+      border-color: var(--olena-food-ordering-color-accent-1);
+    }
+  }
+}
+
+/* FormActions */
+.fo-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 10px;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--olena-food-ordering-color-gray-100);
+}
+
+/* FormActions */
+.fo-field {
+  $self: &;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  .fo-field__radio-group,
+  .fo-field__checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--olena-food-ordering-color-gray-100);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: transparent;
+
+    &:focus {
+      border-color: var(--olena-food-ordering-color-accent-1);
+    }
+  }
+
+  &__select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--olena-food-ordering-color-gray-100);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: var(--olena-food-ordering-color-base);
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234A5056' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    outline: transparent;
+
+    &:focus {
+      border-color: var(--olena-food-ordering-color-accent-1) !important;
+      outline: none;
+    }
+  }
+
+  &__desc {
+    font-size: 0.85rem;
+    color: var(--olena-food-ordering-color-gray-200);
+    margin-top: 0.25rem;
+  }
+
+  &_error {
+
+    #{$self}__input,
+    #{$self}__select,
+    #{$self}__textarea {
+      border-color: var(--olena-food-ordering-color-error-200);
+    }
+
+    #{$self}__error {
+      color: var(--olena-food-ordering-color-error-200);
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+/* Navigation */
+.fo-admin-header {
+  background-color: var(--olena-food-ordering-color-base);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--olena-food-ordering-color-gray-100);
+  margin-bottom: 2rem;
+}
+
+.fo-tabs {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid var(--olena-food-ordering-color-gray-100);
+
+  &__item {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    color: var(--olena-food-ordering-color-gray-200);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--olena-food-ordering-color-accent-1);
+    }
+
+    &_active {
+      color: var(--olena-food-ordering-color-accent-1);
+      border-bottom-color: var(--olena-food-ordering-color-accent-1);
+    }
+  }
+}
+
+/* Description */
+.fo-description {
+  font-size: 0.95rem;
+  color: var(--olena-food-ordering-color-gray-200);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* MainTitle */
+.fo-main-title {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  color: var(--olena-food-ordering-color-contrast);
+  font-weight: bold;
+}
+
+.fo-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fo-flash-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--olena-food-ordering-color-base);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 300px;
+  max-width: 450px;
+  animation: slideIn 0.3s ease forwards;
+  margin-bottom: 20px;
+
+  &.fo-success {
+    border-left: 4px solid var(--olena-food-ordering-color-success-200);
+
+    & .fo-icon {
+      color: var(--olena-food-ordering-color-success-200);
+    }
+  }
+
+  & .fo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  & .fo-content {
+    flex: 1;
+  }
+
+  & .fo-title {
+    font-weight: 500;
+    color: var(--olena-food-ordering-color-contrast);
+    margin-bottom: 0.25rem;
+  }
+
+  & .fo-flash-description {
+    font-size: 0.9rem;
+    color: var(--olena-food-ordering-color-gray-200);
+  }
+
+  & .fo-close {
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    color: var(--olena-food-ordering-color-gray-200);
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+
+    &:hover {
+      background: var(--olena-food-ordering-color-gray-100);
+      color: var(--olena-food-ordering-color-contrast);
+    }
+  }
+
+  &.fo-error {
+    border-left: 4px solid var(--olena-food-ordering-color-error-200);
+
+    & .fo-icon {
+      color: var(--olena-food-ordering-color-error-200);
+    }
+  }
+
+  &.fo-warning {
+    border-left: 4px solid var(--olena-food-ordering-color-warning-200);
+
+    & .fo-icon {
+      color: var(--olena-food-ordering-color-warning-200);
+    }
+  }
+
+  & .removing {
+    animation: slideOut 0.3s ease forwards;
+  }
+
+  @media (max-width: 768px) {
+
+    & .fo-container {
+      top: auto;
+      bottom: 2rem;
+      left: 1rem;
+      right: 1rem;
+    }
+
+    &.fo-flash-message {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

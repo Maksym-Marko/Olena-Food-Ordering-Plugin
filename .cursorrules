@@ -1,0 +1,109 @@
+You are an expert in WordPress plugin development, with deep knowledge of both backend (PHP, WordPress REST API) and frontend (React.js) technologies.
+
+Key Principles
+- Write modular, maintainable code following both WordPress and React best practices
+- Implement proper separation of concerns between backend and frontend
+- Focus on performance optimization and proper state management
+- Follow WordPress REST API best practices for endpoints and authentication
+- Use modern React patterns and hooks
+- Implement proper error handling on both backend and frontend
+
+Backend (WordPress/PHP)
+- Follow all WordPress plugin development standards
+- Implement proper REST API endpoint registration and security
+- Use WordPress authentication and authorization for API endpoints
+- Implement proper data validation and sanitization
+- Register necessary WordPress hooks for plugin functionality
+
+Frontend (React.js)
+- Use modern React (17+) features and patterns
+- Implement proper state management (React Context or Redux if needed)
+- Use WordPress REST API for data fetching:
+- Implement proper error handling for API requests
+- Use WordPress nonces for authentication
+- Handle loading and error states
+- Follow React best practices:
+- Use functional components and hooks
+- Implement proper code splitting
+- Use React Router for navigation if needed
+- Implement proper form handling and validation
+
+The application work with selected menu items and cart items. 
+Here is an example of how the selected menu items look like:
+[
+    {
+        "id": 38,
+        "name": "Pepperoni Supreme",
+        "description": "Indulge in our legendary Pepperoni Supreme...",
+        "categories": [
+            {
+                "id": 9,
+                "name": "Pizza",
+                "slug": "pizza"
+            }
+        ],
+        "thumbnail": false,
+        "price_per_unit": 14.99,
+        "quantity": 1,
+        "selected_add_ons": [],
+        "specialInstructions": "",
+        "timestamps": {
+            "selected": {
+                "utc": "2024-12-27T06:59:08.028Z"
+            },
+            "lastModified": {
+                "utc": "2024-12-27T06:59:08.907Z"
+            },
+            "addedToCart": {}
+        }
+    }
+]
+
+Here is an example of how the cart items look like:
+[
+    {
+        "id": 38,
+        "name": "Pepperoni Supreme",
+        "description": "Indulge in our legendary Pepperoni Supreme...",
+        "categories": [
+            {
+                "id": 9,
+                "name": "Pizza",
+                "slug": "pizza"
+            }
+        ],
+        "thumbnail": false,
+        "price_per_unit": 14.99,
+        "quantity": 1,
+        "selected_add_ons": [
+            {
+                "name": "BBQ Sauce",
+                "price": 0.99,
+                "min": 0,
+                "max": 2,
+                "id": 9,
+                "quantity": 1
+            },
+            {
+                "name": "Spicy Mayo",
+                "price": 0.99,
+                "min": 0,
+                "max": 2,
+                "id": 8,
+                "quantity": 1
+            }
+        ],
+        "specialInstructions": "",
+        "timestamps": {
+            "selected": {
+                "utc": "2024-12-27T07:12:17.862Z"
+            },
+            "lastModified": {
+                "utc": "2024-12-27T07:12:17.862Z"
+            },
+            "addedToCart": {
+                "utc": "2024-12-27T07:12:20.982Z"
+            }
+        }
+    }
+]

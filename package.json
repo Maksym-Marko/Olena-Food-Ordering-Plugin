@@ -1,0 +1,54 @@
+{
+	"name": "vajofo-npm-handler",
+	"version": "0.1.0",
+	"description": "NPM Handler",
+	"author": "Maksym Marko",
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"watch": "webpack --watch --mode=development --config webpack.custom.config.js",
+		"build": "webpack --mode=production --config webpack.custom.config.js"
+	},
+	"scriptsForGutenbergCompelling": {
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-src-dir=src/gutenberg/ --output-path=build/gutenberg/",
+		"build": "wp-scripts build --webpack-src-dir=src/gutenberg/ --output-path=build/gutenberg/"
+	},
+	"scriptsForJavaScriptCompelling": {
+		"watch": "webpack --watch --mode=development --config webpack.custom.config.js",
+		"build": "webpack --mode=production --config webpack.custom.config.js"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.24.9",
+		"@babel/preset-env": "^7.24.8",
+		"@babel/preset-react": "^7.24.7",
+		"@wordpress/scripts": "^26.17.0",
+		"babel-loader": "^9.1.3",
+		"css-loader": "^7.1.2",
+		"css-minimizer-webpack-plugin": "^7.0.0",
+		"mini-css-extract-plugin": "^2.9.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"sass": "^1.80.6",
+		"sass-loader": "^16.0.3",
+		"style-loader": "^4.0.0",
+		"terser-webpack-plugin": "^5.3.10",
+		"webpack": "^5.93.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.0.4"
+	},
+	"dependencies": {
+		"@reduxjs/toolkit": "^2.3.0",
+		"@wordpress/i18n": "^5.13.0",
+		"axios": "^1.6.7",
+		"clsx": "^2.1.1",
+		"lodash": "^4.17.21",
+		"react-redux": "^9.1.2",
+		"react-router-dom": "^6.27.0",
+		"redux": "^5.0.1",
+		"sass": "^1.80.6"
+	}
+}
