@@ -5,7 +5,7 @@
  * Description:       Olena Food Ordering - a simple yet powerful WordPress plugin for restaurants and food trucks. Easily manage your menu, handle orders with custom add-ons, and organize pickups. Mobile-friendly interface ensures smooth ordering experience for your customers
  * Version:           1.1
  * Requires at least: 6.0
- * Requires PHP:      7.4.3
+ * Requires PHP:      7.4
  * Author:            Maksym Marko
  * Author URI:        https://markomaksym.com.ua/
  * Text Domain:       olena-food-ordering
@@ -79,9 +79,9 @@ if (!defined('VAJOFO_PLUGIN_ABS_PATH')) {
 }
 
 /**
- * Run plugin if PHP >= 7.4.30
+ * Run plugin if PHP >= 7.4
  */
-if (PHP_VERSION_ID >= 70430) {
+if (PHP_VERSION_ID >= 70400) {
 
     /**
      * Autoload.

@@ -2,7 +2,7 @@
 Contributors: markomaksym
 Tags: food ordering, food truck, restaurant, food delivery, online ordering, mobile ordering, pickup scheduling, menu management, add-ons, mobile-friendly, olena food ordering
 Requires at least: 6.0
-Requires PHP: 7.4.3
+Requires PHP: 7.4
 Tested up to: 6.7
 Stable tag: 1.1
 License: GPLv2 or later
